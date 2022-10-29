@@ -21,6 +21,8 @@ ende = 0
 servos.P2.setAngle(180)
 pins.servoWritePin(AnalogPin.P15, 180)
 datalogger.setColumnTitles("Dauer")
+serial.redirectToUSB()
+serial.setBaudRate(BaudRate.BaudRate115200)
 while (!(input.logoIsPressed())) {
     basic.pause(1)
 }
